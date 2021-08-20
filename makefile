@@ -5,16 +5,16 @@ CFLAGS = -lm -pthread -O3 -march=native -Wall -funroll-loops -Wno-unused-result
 all: word2vec word2phrase distance word-analogy compute-accuracy
 
 word2vec : word2vec.c
-	$(CC) word2vec.c -o word2vec $(CFLAGS)
+	$(CC) word2vec.c -o word2vec.exe $(CFLAGS)
 word2phrase : word2phrase.c
-	$(CC) word2phrase.c -o word2phrase $(CFLAGS)
+	$(CC) word2phrase.c -o word2phrase.exe $(CFLAGS)
 distance : distance.c
-	$(CC) distance.c -o distance $(CFLAGS)
+	$(CC) distance.c -o distance.exe $(CFLAGS)
 word-analogy : word-analogy.c
-	$(CC) word-analogy.c -o word-analogy $(CFLAGS)
+	$(CC) word-analogy.c -o word-analogy.exe $(CFLAGS)
 compute-accuracy : compute-accuracy.c
-	$(CC) compute-accuracy.c -o compute-accuracy $(CFLAGS)
+	$(CC) compute-accuracy.c -o compute-accuracy.exe $(CFLAGS)
 	chmod +x *.sh
 
 clean:
-	rm -rf word2vec word2phrase distance word-analogy compute-accuracy
+	rm -rf *.exe
