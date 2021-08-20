@@ -47,5 +47,6 @@ Temporary Items
 .apdisk
 
 *.exe
+*.bin
 text8.gz
 text8
